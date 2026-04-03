@@ -1,0 +1,13 @@
+- name: Validate against MergeBetter
+
+uses: fjogeleit/http-request-action@v1
+
+with:
+
+url: $${{ secrets.MERGEBETTER_WEBHOOK_URL }}
+
+method: POST
+
+contentType: application/json
+
+data: '{"issueKey":"...", "branch":"...", "policyId": 1}'
